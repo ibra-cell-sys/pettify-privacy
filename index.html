@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pettify – Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0D0F12;
+      --surface: #161920;
+      --border: #252933;
+      --accent: #6C63FF;
+      --accent-soft: rgba(108, 99, 255, 0.12);
+      --text-primary: #F0F2F5;
+      --text-secondary: #9299A8;
+      --text-muted: #5A6072;
+      --radius: 12px;
+      --max-w: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 48px 20px 80px;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: var(--accent-soft);
+      border: 1.5px solid var(--accent);
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .logo svg { width: 36px; height: 36px; fill: var(--accent); }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .last-updated {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    section:hover {
+      border-color: rgba(108, 99, 255, 0.3);
+      transition: border-color 0.2s;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: attr(data-icon);
+      font-size: 1.2rem;
+    }
+
+    p { color: var(--text-secondary); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    ul li {
+      color: var(--text-secondary);
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+      top: 9px;
+    }
+
+    strong { color: var(--text-primary); font-weight: 600; }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 12px;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+
+    /* Third-party table */
+    .third-party-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .third-party-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .third-party-item .service-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .third-party-item .service-desc {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .third-party-item .service-link {
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .third-party-item .service-link:hover { text-decoration: underline; }
+
+    /* Contact */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info .label { font-size: 0.75rem; color: var(--text-muted); }
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 540px) {
+      section { padding: 20px 18px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/>
+      </svg>
+    </div>
+    <h1>Pettify Privacy Policy</h1>
+    <p class="subtitle">We respect your privacy and your pets' data.</p>
+    <span class="last-updated">Last updated: November 17, 2025</span>
+  </header>
+
+  <!-- Overview -->
+  <section>
+    <h2 data-icon="📋">Overview</h2>
+    <p>
+      This Privacy Policy describes how <strong>Pettify</strong> ("we", "our", or "the app") handles information
+      when you use our mobile application. We are committed to protecting your personal information and
+      being transparent about how we use it.
+    </p>
+    <p>
+      By using Pettify, you agree to the collection and use of information as described in this policy.
+    </p>
+  </section>
+
+  <!-- Data We Collect -->
+  <section>
+    <h2 data-icon="🗂️">Information We Collect</h2>
+    <p>Pettify collects the following types of information:</p>
+    <ul>
+      <li><strong>Pet profiles</strong> — name, species, breed, date of birth, weight, photos, and notes you enter</li>
+      <li><strong>Health records</strong> — veterinary visits, medications, vaccinations, and medical documents you upload</li>
+      <li><strong>Memories &amp; photos</strong> — images and captions you add to your pet's memory timeline</li>
+      <li><strong>Reminders</strong> — reminder titles, dates, and times you configure for pet care tasks</li>
+      <li><strong>AI chat messages</strong> — questions and messages you send to the in-app AI assistant</li>
+      <li><strong>Backup data</strong> — if you use the backup feature, an export of your app data</li>
+      <li><strong>Device &amp; usage information</strong> — advertising identifier, app usage patterns (via Google AdMob, for ad personalisation)</li>
+    </ul>
+  </section>
+
+  <!-- Local Storage -->
+  <section>
+    <h2 data-icon="📱">Local Storage</h2>
+    <p>
+      <strong>All your pet data — profiles, health records, memories, and reminders — is stored
+      locally on your device</strong> using an encrypted SQLite database. We do not upload this data
+      to any server unless you explicitly use the backup or export features.
+    </p>
+    <div class="highlight">
+      🔒 Your pet's data stays on your device. Pettify does not have access to your personal pet records.
+    </div>
+  </section>
+
+  <!-- AI Assistant -->
+  <section>
+    <h2 data-icon="🤖">AI Assistant</h2>
+    <p>
+      Pettify includes an AI-powered pet assistant. When you send a message to the assistant,
+      your query is sent to third-party AI providers to generate a response. These queries may include
+      text you type about your pet's situation or health.
+    </p>
+    <p>
+      We do not store your AI conversations on our own servers. However, the AI providers we use
+      may process and retain messages in accordance with their own privacy policies.
+    </p>
+  </section>
+
+  <!-- Permissions -->
+  <section>
+    <h2 data-icon="🔐">App Permissions</h2>
+    <ul>
+      <li><strong>Photo Library</strong> — to let you add pet photos and memories. Only accessed when you choose a photo.</li>
+      <li><strong>Notifications</strong> — to send you reminders for vet appointments, medications, and care tasks. You can disable these at any time in device settings.</li>
+      <li><strong>Files / Documents</strong> — to allow you to import documents (e.g. vet reports) and export PDFs. Files are accessed only when you interact with these features.</li>
+      <li><strong>Internet access</strong> — required for ads and AI assistant features.</li>
+    </ul>
+  </section>
+
+  <!-- Advertising -->
+  <section>
+    <h2 data-icon="📢">Advertising</h2>
+    <p>
+      Pettify uses <strong>Google AdMob</strong> to show ads in the free version of the app.
+      AdMob may collect and use your advertising identifier (IDFA on iOS, Advertising ID on Android)
+      to deliver personalised advertisements.
+    </p>
+    <p>
+      On iOS, we request App Tracking Transparency (ATT) permission before accessing your IDFA.
+      You can opt out of personalised ads at any time through your device settings.
+    </p>
+    <p>
+      Upgrading to <strong>Pettify Premium</strong> removes all ads from the app.
+    </p>
+  </section>
+
+  <!-- Third-party services -->
+  <section>
+    <h2 data-icon="🔗">Third-Party Services</h2>
+    <p>Pettify integrates with the following third-party services:</p>
+    <div class="third-party-grid">
+      <div class="third-party-item">
+        <span class="service-name">Google AdMob</span>
+        <span class="service-desc">In-app advertising platform. Collects advertising identifiers for ad personalisation.</span>
+        <a class="service-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+      </div>
+      <div class="third-party-item">
+        <span class="service-name">AI Language Model Providers</span>
+        <span class="service-desc">Process AI assistant queries. Messages are sent to generate responses; not stored by Pettify.</span>
+        <span class="service-desc" style="font-style:italic;">See individual provider policies for data retention details.</span>
+      </div>
+      <div class="third-party-item">
+        <span class="service-name">Expo / React Native</span>
+        <span class="service-desc">App framework. May collect crash reports and diagnostics to improve app stability.</span>
+        <a class="service-link" href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Retention -->
+  <section>
+    <h2 data-icon="🗑️">Data Retention &amp; Deletion</h2>
+    <p>
+      Since your data is stored locally on your device, you are in full control of its retention.
+      You can delete individual pets, records, photos, or memories directly within the app.
+      Uninstalling Pettify will remove all locally stored data from your device.
+    </p>
+    <p>
+      If you have created backups, you are responsible for managing and deleting those backup files
+      from wherever you saved them (e.g. your Files app or cloud storage).
+    </p>
+  </section>
+
+  <!-- Children -->
+  <section>
+    <h2 data-icon="👶">Children's Privacy</h2>
+    <p>
+      Pettify is not directed at children under the age of 13. We do not knowingly collect personal
+      information from children under 13. If you believe a child under 13 has provided us with personal
+      information, please contact us and we will take steps to delete such information.
+    </p>
+  </section>
+
+  <!-- Changes -->
+  <section>
+    <h2 data-icon="📝">Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will update the
+      "Last updated" date at the top of this page. We encourage you to review this policy periodically.
+      Continued use of Pettify after any changes constitutes your acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2 data-icon="✉️">Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy or how
+      your data is handled, please contact us at:
+    </p>
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <div class="contact-info">
+        <div class="label">Email</div>
+        <a href="mailto:ibraarbi2@gmail.com">ibraarbi2@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pettify. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
